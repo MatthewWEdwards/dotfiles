@@ -175,7 +175,7 @@ EOM
   then
     while true ;
     do
-        answer="n"
+        answer="y"
         test "$SKIP" -eq 0 && read -rp "This will overwrite dotfiles in your home directory.  Continue? [y/n]: " answer
         case $answer in
             [Yy] ) break ;;
