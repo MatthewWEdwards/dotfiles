@@ -60,3 +60,5 @@ set colorcolumn=+1
 " Scroll in vim popup with jk
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+
+set paste
