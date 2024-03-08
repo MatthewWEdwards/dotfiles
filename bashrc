@@ -112,6 +112,7 @@ function god() {
 }
 
 alias refresh="source ~/.bashrc"
+alias r="refresh"
 alias sbluetooth="sudo bluetoothd -d -C -E -n"
 
 # Open local file in google chrome
