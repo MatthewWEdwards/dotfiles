@@ -22,3 +22,5 @@ bluetooth_reset () {
   rfkill unblock all
 }
 alias breset="bluetooth_reset"
+
+alias sbluetooth="sudo bluetoothd -d -C -E -n"
