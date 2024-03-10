@@ -119,6 +119,9 @@ alias sbluetooth="sudo bluetoothd -d -C -E -n"
 # Open local file in google chrome
 alias bopen="google-chrome $@"
 
+# Docker compose
+alias dc="sudo docker compose"
+
 # Enable VI Mode
 set -o vi
 
