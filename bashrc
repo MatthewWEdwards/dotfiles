@@ -225,6 +225,11 @@ to_desktop() {
 }
 alias scptd="to_desktop"
 
+login_desktop() {
+  ssh $DESKTOP_IP
+}
+alias logd="login_desktop"
+
 from_server() {
   # Files
   file=$1
@@ -240,3 +245,8 @@ to_server() {
   scp -r $file $SERVER_IP:$dest
 }
 alias scpts="to_server"
+
+login_server() {
+  ssh $SERVER_IP
+}
+alias logs="login_server"
