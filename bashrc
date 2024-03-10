@@ -91,9 +91,12 @@ cpd() {
 
 alias htmltidy="tidy -q -i -m -w 160 -ashtml -utf8"
 
-# Created by `pipx` on 2023-12-24 17:58:41
-export PATH="$PATH:/home/matt/.local/bin"
-eval "$(register-python-argcomplete3 pipx)"
+if [ "" != "$(which register-python-argcomplete3)" ]
+then
+  # Created by `pipx` on 2023-12-24 17:58:41
+  export PATH="$PATH:/home/matt/.local/bin"
+  eval "$(register-python-argcomplete3 pipx)"
+fi
 
 # Aliases
 REPOS="$HOME/Documents/repos"
