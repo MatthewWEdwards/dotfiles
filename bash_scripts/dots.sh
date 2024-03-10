@@ -21,7 +21,7 @@ ${dirs[@]}
 
 OPTIONS:
     -f: Don't prompt before overwriting files
-    -g: Pull dotfiles git repository if it doesn't exist.
+    -g: Pull dotfiles git repository if it doesn't exist. Push or Pull to remote.
     -h: Display this message
     -p: Push dotfiles to repo.
 EOM
@@ -60,6 +60,7 @@ EOM
   # Repo -> Local
   if [ $PUSH == 0 ]
   then
+    test "$GIT" -eq 1 &&  { cd $DOTFILES_DIR ; git pull ; } 
     while true ;
     do
         answer="y"
@@ -81,6 +82,7 @@ EOM
     done
   # Local -> Repo
   else
+    test "$GIT" -eq 1 &&  { cd $DOTFILES_DIR ; git pull ; } 
     for f in ${dots[@]} ;
     do
       # Omit leading . in repo
@@ -92,5 +94,6 @@ EOM
       rm -r $DOTFILES_DIR/${d:1}
       cp -r $HOME/$d $DOTFILES_DIR/${d:1}
     done
+    test "$GIT" -eq 1 &&  { cd $DOTFILES_DIR ; git add * ; git commit ; git push ; } 
   fi
 }
