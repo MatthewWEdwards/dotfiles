@@ -80,11 +80,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-cpd() { 
+cpd() {
     dir="$1"
     shift
-    for f in "$@" ; 
-    do 
+    for f in "$@" ;
+    do
         cp "$f" "$dir"
     done
 }
@@ -136,7 +136,7 @@ dotsync() {
 dotsync [OPTIONS]
 
 Synchronize local dotfiles between my repo and the local machine. By default, dotfiles are copied
-from the repository to the local machines.  The following dotfiles are synched: 
+from the repository to the local machines.  The following dotfiles are synched:
 
 ${dots[@]}
 
@@ -144,7 +144,7 @@ OPTIONS:
     -f: Don't prompt before overwriting files
     -g: Pull dotfiles git repository if it doesn't exist.
     -h: Display this message
-    -p: Push dotfiles to repo. 
+    -p: Push dotfiles to repo.
 EOM
 
   DOTFILES_DIR="$REPOS/dotfiles"
@@ -155,7 +155,7 @@ EOM
   PUSH=0
   local OPTIND
   while getopts fghp opt; do
-      case $opt in 
+      case $opt in
       f) SKIP=1 ;;
       g) GIT=1 ;;
       h) echo "$USAGE" ; return 1 ;;
@@ -166,7 +166,7 @@ EOM
   shift $((OPTIND-1))
 
   if [ $GIT == 1 ]
-  then 
+  then
       if [ -d $DOTFILES_DIR ]
       then
           echo "$DOTFILES_DIR exists. Remove to pull dotfiles."
@@ -193,14 +193,50 @@ EOM
     done
     for f in ${dots[@]} ;
     do
-      cp $DOTFILES_DIR/${f:1} $HOME/$f 
+      cp $DOTFILES_DIR/${f:1} $HOME/$f
     done
   # Local -> Repo
   else
     for f in ${dots[@]} ;
     do
       # Omit leading . in repo
-      cp $HOME/$f $DOTFILES_DIR/${f:1} 
+      cp $HOME/$f $DOTFILES_DIR/${f:1}
     done
   fi
 }
+
+# File transfers
+DESKTOP_IP="192.168.0.100"
+SERVER_IP="192.168.0.101"
+
+from_desktop() {
+  # Files
+  file=$1
+  dest=$2
+  scp -r $DESKTOP_IP:$file $dest
+}
+alias scpfd="from_desktop"
+
+to_desktop() {
+  # Files
+  file=$1
+  dest=$2
+  scp -r $file $DESKTOP_IP:$dest
+}
+alias scptd="to_desktop"
+
+from_server() {
+  # Files
+  file=$1
+  dest=$2
+  scp -r $SERVER_IP:$file $dest
+}
+alias scpfs="from_server"
+
+to_server() {
+  # Files
+  file=$1
+  dest=$2
+  scp -r $file $SERVER_IP:$dest
+}
+alias scpts="to_server"
