@@ -107,6 +107,7 @@ alias mdoc="cd $REPOS/personal_site/mdoc"
 alias personal_site="cd $REPOS/personal_site"
 alias site="personal_site"
 alias writing="cd $REPOS/writing"
+alias msys="cd $REPOS/msys"
 
 alias gol="git log --oneline"
 function god() {
@@ -145,6 +146,20 @@ save_to_mirrors() {
   file=$1
   loc=$2
   mkdir -p $MIRRORS/$loc
-  cp $file $MIRRORS/$loc
+  cp -r $file $MIRRORS/$loc
 }
 alias stm="save_to_mirrors"
+
+save_to_nfs() {
+  file=$1
+  loc=$2
+  mkdir -p $NFS_DIR/$loc
+  cp -r $file $MIRRORS/$loc
+}
+alias stn="save_to_mirrors"
+
+nfs_open() {
+  file=$1
+  bopen $NFS_DIR/$file
+}
+alias nopen="nfs_open"
