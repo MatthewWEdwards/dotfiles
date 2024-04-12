@@ -62,3 +62,7 @@ inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 set paste
+
+" Alias to turn numbers on and off
+command NN set nonumber nornu
+command YN set number rnu
