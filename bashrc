@@ -156,15 +156,34 @@ save_to_nfs() {
   file=$1
   loc=$2
   mkdir -p $NFS_DIR/$loc
-  cp -r $file $MIRRORS/$loc
+  cp -r $file $NFS_DIR/$loc/
 }
-alias stn="save_to_mirrors"
+alias stn="save_to_nfs"
 
 nfs_open() {
   file=$1
   bopen $NFS_DIR/$file
 }
 alias nopen="nfs_open"
+
+nfs_ls() {
+  ls -lh $NFS_DIR/$@
+}
+alias lsnfs="nfs_ls"
+
+nfs_ln() {
+  file=$1
+  linkname=$2
+  ln -s $NFS_DIR/$file $linkname
+}
+alias lnnfs="nfs_ln"
+
+nfs_mirrors_ln() {
+  file=$1
+  linkname=$2
+  ln -s $MIRRORS/$file $linkname
+}
+alias lnmnfs="nfs_mirrors_ln"
 
 # tmp
 OLDHOME="/media/matt/390600a3-5ca7-44c1-98d9-11b38a26d409/home/matt/"
