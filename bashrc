@@ -131,10 +131,12 @@ set -o vi
 # Load scripts
 
 SCRIPTS_DIR="$HOME/.bash_scripts"
+alias scripts="cd $SCRIPTS_DIR"
 
-source $SCRIPTS_DIR/sys.sh
-source $SCRIPTS_DIR/bluetooth.sh
-source $SCRIPTS_DIR/dots.sh
+for file in `find $SCRIPTS_DIR -name "*.sh"`
+do
+  source $file
+done
 
 # NFS
 ### Mount NFS
