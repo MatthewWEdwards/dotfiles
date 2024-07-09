@@ -109,13 +109,6 @@ alias site="personal_site"
 alias writing="cd $REPOS/writing"
 alias msys="cd $REPOS/msys"
 
-alias gol="git log --oneline"
-function god() {
-    rev="$1"
-    test -z $rev && { git diff HEAD ; return 0; }
-    git diff $rev~1 $rev
-}
-
 alias refresh="source ~/.bashrc"
 alias r="refresh"
 
