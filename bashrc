@@ -80,33 +80,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-cpd() {
-    dir="$1"
-    shift
-    for f in "$@" ;
-    do
-        cp "$f" "$dir"
-    done
-}
-
-if [ "" != "$(which register-python-argcomplete3)" ]
-then
-  # Created by `pipx` on 2023-12-24 17:58:41
-  export PATH="$PATH:/home/matt/.local/bin"
-  eval "$(register-python-argcomplete3 pipx)"
-fi
+# Enable VI Mode
+set -o vi
 
 # Aliases
 alias refresh="source ~/.bashrc"
 alias r="refresh"
 
-# Enable VI Mode
-set -o vi
-
 # Load scripts
 SCRIPTS_DIR="$HOME/.bash_scripts"
 alias scripts="cd $SCRIPTS_DIR"
-
 for file in `find $SCRIPTS_DIR -name "*.sh"`
 do
   source $file
