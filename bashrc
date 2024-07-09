@@ -89,8 +89,6 @@ cpd() {
     done
 }
 
-alias htmltidy="tidy -q -i -m -w 160 -ashtml -utf8"
-
 if [ "" != "$(which register-python-argcomplete3)" ]
 then
   # Created by `pipx` on 2023-12-24 17:58:41
@@ -101,12 +99,6 @@ fi
 # Aliases
 alias refresh="source ~/.bashrc"
 alias r="refresh"
-
-# Open local file in google chrome
-alias bopen="google-chrome $@"
-
-# Docker compose
-alias dc="sudo docker compose"
 
 # Enable VI Mode
 set -o vi
@@ -123,4 +115,3 @@ done
 # tmp
 OLDHOME="/media/matt/390600a3-5ca7-44c1-98d9-11b38a26d409/home/matt/"
 alias oldhome="cd $OLDHOME"
-alias discordup="sudo dpkg -i \$(ls "$HOME/Downloads/discord-*" | sort | tail -n 1)"
