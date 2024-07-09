@@ -23,7 +23,7 @@ to_desktop() {
 alias scptd="to_desktop"
 
 login_desktop() {
-  ssh $DESKTOP_IP
+  ssh -X $DESKTOP_IP
 }
 alias logd="login_desktop"
 
@@ -44,6 +44,6 @@ to_server() {
 alias scpts="to_server"
 
 login_server() {
-  ssh $SERVER_IP
+  ssh -X $SERVER_IP
 }
 alias logs="login_server"
