@@ -99,16 +99,6 @@ then
 fi
 
 # Aliases
-REPOS="$HOME/Documents/repos"
-alias repos="cd $REPOS"
-alias django="cd $REPOS/personal_site/django"
-alias dotfiles="cd $REPOS/dotfiles"
-alias mdoc="cd $REPOS/personal_site/mdoc"
-alias personal_site="cd $REPOS/personal_site"
-alias site="personal_site"
-alias writing="cd $REPOS/writing"
-alias msys="cd $REPOS/msys"
-
 alias refresh="source ~/.bashrc"
 alias r="refresh"
 
@@ -122,7 +112,6 @@ alias dc="sudo docker compose"
 set -o vi
 
 # Load scripts
-
 SCRIPTS_DIR="$HOME/.bash_scripts"
 alias scripts="cd $SCRIPTS_DIR"
 
@@ -134,5 +123,4 @@ done
 # tmp
 OLDHOME="/media/matt/390600a3-5ca7-44c1-98d9-11b38a26d409/home/matt/"
 alias oldhome="cd $OLDHOME"
-
 alias discordup="sudo dpkg -i \$(ls "$HOME/Downloads/discord-*" | sort | tail -n 1)"
