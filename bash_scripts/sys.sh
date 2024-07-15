@@ -5,6 +5,7 @@
 ## File transfers
 DESKTOP_IP="192.168.0.100"
 SERVER_IP="192.168.0.101"
+VMS_IP="192.168.0.121"
 
 from_desktop() {
   # Files
@@ -47,3 +48,16 @@ login_server() {
   ssh -X $SERVER_IP
 }
 alias logs="login_server"
+
+to_vms() {
+  # Files
+  file=$1
+  dest=$2
+  scp -r $file $VMS_IP:$dest
+}
+alias scptv="to_vms"
+
+login_vms() {
+  ssh -X $VMS_IP
+}
+alias logv="login_vms"
