@@ -3,6 +3,11 @@ NFS_DIR="/mnt/nfs/nfs"
 MIRRORS="$NFS_DIR/mirrors"
 alias mnfs="sudo mkdir -p /mnt/nfs ; sudo mount 192.168.0.101:/media/5TB /mnt/nfs ; "
 alias mirrors="cd $MIRRORS"
+
+nfs() {
+ cd $NFS_DIR
+}
+
 save_to_mirrors() {
   file=$1
   loc=$2
