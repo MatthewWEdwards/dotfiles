@@ -12,7 +12,7 @@
 #   None
 #######################################
 directories_globals() {
-  REPOS="$HOME/Documents/repos"
+  export REPOS="$HOME/Documents/repos"
 }
 
 #######################################
@@ -25,7 +25,7 @@ directories_globals() {
 #   None
 #######################################
 repos() {
-  "cd $REPOS"
+  cd $REPOS
 }
 
 #######################################
@@ -38,7 +38,7 @@ repos() {
 #   None
 #######################################
 django() {
-  "cd $REPOS/personal_site/django"
+  cd $REPOS/personal_site/django
 }
 
 #######################################
@@ -51,7 +51,7 @@ django() {
 #   None
 #######################################
 dotfiles() {
-  "cd $REPOS/dotfiles"
+  cd $REPOS/dotfiles
 }
 
 #######################################
@@ -64,7 +64,7 @@ dotfiles() {
 #   None
 #######################################
 mdoc() {
-  "cd $REPOS/personal_site/mdoc"
+  cd $REPOS/personal_site/mdoc
 }
 
 #######################################
@@ -77,9 +77,9 @@ mdoc() {
 #   site
 #######################################
 personal_site() {
-  "cd $REPOS/personal_site"
+  cd $REPOS/personal_site
 }
-alias site="personal_site"
+alias site=personal_site
 
 #######################################
 # cd to the writing repo
@@ -91,7 +91,7 @@ alias site="personal_site"
 #   None
 #######################################
 writing() {
-  "cd $REPOS/writing"
+  cd $REPOS/writing
 }
 
 #######################################
@@ -104,7 +104,7 @@ writing() {
 #   None
 #######################################
 msys() {
-  "cd $REPOS/msys"
+  cd $REPOS/msys
 }
 
 #######################################
@@ -117,5 +117,5 @@ msys() {
 #   None
 #######################################
 pages() {
-  "cd $REPOS/msys/site/docusaurus/src/pages"
+  cd $REPOS/msys/site/docusaurus/src/pages
 }
