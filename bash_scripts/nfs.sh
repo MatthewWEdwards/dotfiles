@@ -49,11 +49,16 @@ nfs_mirrors_ln() {
 }
 alias lnmnfs="nfs_mirrors_ln"
 
-mirrors_backup() {
+nfs_dir_backup() {
   (
+    dir=$1
     cd $NFS_DIR
     d=$(mktemp -d)
-    tar -czf $d/mirrors.tgz mirrors
-    echo "Created backup $d/mirrors.tgz"
+    tar -czf $d/$dir.tgz $dir
+    echo "Created backup $d/$dir.tgz"
   )
+}
+
+mirrors_backup() {
+  nfs_dir_backup mirrors
 }
