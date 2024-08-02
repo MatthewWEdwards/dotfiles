@@ -1,8 +1,16 @@
 #!/bin/bash
 
-# Utility scripts for syncing dotfiles
+# The Dotsync Bash Program
 
-# Sync to dotfiles
+#######################################
+# dotsync util for updating dotfiles
+# 
+# See help message for more details
+# Globals:
+#   None
+# Arguments:
+#   None
+#######################################
 dotsync() {
     dots=(".gitconfig" ".vimrc" ".bashrc" ".tmux.conf")
     dirs=(".bash_scripts")

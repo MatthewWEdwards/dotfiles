@@ -1,5 +1,14 @@
 #/bin/bash
 
+# Functions for managing bluetooth on Ubuntu 22.04
+
+#######################################
+# Reset bluetooth on Ubuntu 22.04
+# Globals:
+#   None
+# Arguments:
+#   None
+#######################################
 bluetooth_reset () { 
   ### Hard Refresh
   
@@ -21,6 +30,25 @@ bluetooth_reset () {
   ## Unblock from rfkill
   rfkill unblock all
 }
-alias breset="bluetooth_reset"
 
-alias sbluetooth="sudo bluetoothd -d -C -E -n"
+#######################################
+# Alias for bluetooth_reset
+# Globals:
+#   None
+# Arguments:
+#   None
+#######################################
+breset() {
+  "bluetooth_reset"
+}
+
+#######################################
+# Restart bluetoothd
+# Globals:
+#   None
+# Arguments:
+#   None
+#######################################
+sbluetooth() {
+  "sudo bluetoothd -d -C -E -n"
+}
