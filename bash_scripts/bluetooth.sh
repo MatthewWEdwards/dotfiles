@@ -39,7 +39,7 @@ bluetooth_reset () {
 #   None
 #######################################
 breset() {
-  "bluetooth_reset"
+  bluetooth_reset
 }
 
 #######################################
@@ -50,5 +50,5 @@ breset() {
 #   None
 #######################################
 sbluetooth() {
-  "sudo bluetoothd -d -C -E -n"
+  sudo bluetoothd -d -C -E -n
 }
