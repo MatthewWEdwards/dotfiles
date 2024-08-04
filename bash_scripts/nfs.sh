@@ -1,7 +1,5 @@
 ### Mount NFS
-NFS_DIR="/mnt/nfs/nfs"
-MIRRORS="$NFS_DIR/mirrors"
-alias mnfs="sudo mkdir -p /mnt/nfs ; sudo mount 192.168.0.101:/media/5TB /mnt/nfs ; "
+alias mnfs="sudo mkdir -p $NFS_ROOT ; sudo mount $SERVER_IP:/media/5TB /mnt/nfs ; "
 alias mirrors="cd $MIRRORS"
 
 nfs() {

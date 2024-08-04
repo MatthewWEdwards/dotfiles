@@ -3,20 +3,6 @@
 # Functions for setting the pwd to canonical directories on in msys
 
 #######################################
-# Globals relating to canonical directories in msys
-# Globals:
-#   REPOS - The root directory where all repos are downloaded
-# Arguments:
-#   None
-# Aliases:
-#   None
-#######################################
-directories_globals() {
-  export REPOS="$HOME/Documents/repos"
-}
-directories_globals
-
-#######################################
 # cd to the repository directory
 # Globals:
 #   None

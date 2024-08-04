@@ -3,22 +3,6 @@
 # Utility scripts and global variables for msys
 
 #######################################
-# Globals relating to addresses of hosts
-# Globals:
-#   DESKTOP_IP
-#   SERVER_IP
-#   VMS_IP
-# Arguments:
-#   None
-#######################################
-sys_globals () {
-  export DESKTOP_IP="192.168.0.100"
-  export SERVER_IP="192.168.0.101"
-  export VMS_IP="192.168.0.121"
-}
-sys_globals
-
-#######################################
 # Copy file from desktop system to local
 # Globals:
 #   DESKTOP_IP

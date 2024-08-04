@@ -1,4 +1,4 @@
-FILESERVER_PORT=3500
+#!/bin/bash
 
 fsget() {
   (

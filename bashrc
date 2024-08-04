@@ -90,6 +90,7 @@ alias r="refresh"
 # Load scripts
 SCRIPTS_DIR="$HOME/.bash_scripts"
 alias scripts="cd $SCRIPTS_DIR"
+source "$SCRIPTS_DIR"/env # Source env file first
 for file in `find $SCRIPTS_DIR -name "*.sh"`
 do
   source $file

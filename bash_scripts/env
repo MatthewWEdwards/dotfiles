@@ -1,0 +1,16 @@
+#!/bin/bash
+
+export REPOS="$HOME/Documents/repos"
+
+# Fileserver
+export FILESERVER_PORT=3500
+
+# NFS
+export NFS_ROOT="/mnt/nfs"
+export NFS_DIR="$NFS_ROOT/nfs"
+export MIRRORS="$NFS_DIR/mirrors"
+
+# sys
+export DESKTOP_IP="192.168.0.100"
+export SERVER_IP="192.168.0.101"
+export VMS_IP="192.168.0.121"
