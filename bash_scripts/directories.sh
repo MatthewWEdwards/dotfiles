@@ -14,6 +14,7 @@
 directories_globals() {
   export REPOS="$HOME/Documents/repos"
 }
+directories_globals
 
 #######################################
 # cd to the repository directory

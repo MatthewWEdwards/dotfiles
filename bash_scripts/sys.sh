@@ -16,6 +16,7 @@ sys_globals () {
   export SERVER_IP="192.168.0.101"
   export VMS_IP="192.168.0.121"
 }
+sys_globals
 
 #######################################
 # Copy file from desktop system to local
