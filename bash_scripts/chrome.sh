@@ -7,5 +7,5 @@
 #######################################
 bopen() {
   file=$1
-  google-chrome $1
+  google-chrome "$1"
 }
