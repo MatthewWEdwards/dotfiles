@@ -1,2 +1,3 @@
-alias vtodo="vim $REPOS/msys/site/docusaurus/src/pages/todo.md"
-alias vshopping="vim $REPOS/msys/site/docusaurus/src/pages/shopping.md"
+alias vtodo="vim $NFS_DIR/site/_todo.mdx"
+alias vshopping="vim $NFS_DIR/site/_shopping.mdx"
+
