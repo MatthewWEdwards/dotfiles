@@ -13,4 +13,4 @@ export MIRRORS="$NFS_DIR/mirrors"
 # sys
 export DESKTOP_IP="192.168.0.100"
 export SERVER_IP="192.168.0.101"
-export VMS_IP="192.168.0.121"
+export VMS_IP="192.168.0.102"
