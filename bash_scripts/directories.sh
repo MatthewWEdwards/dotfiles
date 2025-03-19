@@ -95,6 +95,19 @@ msys() {
 }
 
 #######################################
+# cd to the msys docusaurus repo
+# Globals:
+#   REPOS
+# Arguments:
+#   None
+# Aliases:
+#   None
+#######################################
+msrc() {
+  cd $REPOS/msys/site/docusaurus
+}
+
+#######################################
 # cd to the pages directory in the msys docs
 # Globals:
 #   REPOS
@@ -105,4 +118,17 @@ msys() {
 #######################################
 pages() {
   cd $REPOS/msys/site/docusaurus/src/pages
+}
+
+#######################################
+# cd to the docs directory in the msys docs
+# Globals:
+#   REPOS
+# Arguments:
+#   None
+# Aliases:
+#   None
+#######################################
+docs() {
+  cd $REPOS/msys/site/docusaurus/docs
 }
