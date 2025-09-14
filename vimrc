@@ -15,9 +15,6 @@ set breakindent
 " Plugins   
 filetype plugin on    
   
-" Macros   
-let @a = '0f=100i ^[8|dwjq' " places the second word in a line to column 8   
-  
 " Smart Indent  
 set autoindent  
 set smartindent  
