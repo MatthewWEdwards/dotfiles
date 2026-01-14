@@ -10,7 +10,7 @@
 #   None
 #######################################
 displayd () { 
-  randr \
+  xrandr \
     --output DP-0 \
     --mode 2560x1440 \
     --primary \
