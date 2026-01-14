@@ -95,7 +95,7 @@ alias scpts="to_server"
 #   logs
 #######################################
 login_server() {
-  ssh -X $SERVER_IP
+  ssh -X mserver@$SERVER_IP
 }
 alias logs="login_server"
 

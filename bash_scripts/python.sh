@@ -10,6 +10,6 @@
 #   None
 #######################################
 porun () { 
-  poetry run python $@
+  poetry run python "$@"
 }
 
