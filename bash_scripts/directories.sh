@@ -132,3 +132,18 @@ pages() {
 docs() {
   cd $REPOS/msys/site/docusaurus/docs
 }
+
+#######################################
+# cd to the fantome directory
+# Globals:
+#   REPOS
+# Arguments:
+#   None
+# Aliases:
+#   None
+#######################################
+fantome() {
+  cd $REPOS/fantome/$@
+}
+
+alias f="fantome"
