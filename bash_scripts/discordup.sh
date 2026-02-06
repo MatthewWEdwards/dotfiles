@@ -12,5 +12,5 @@
 #   None
 #######################################
 discordup() {
-  sudo dpkg -i $(ls $HOME/Downloads/discord-* | sort -n | tail -n 1)
+  sudo dpkg -i "$(ls $HOME/Downloads/discord-* | sort -V | tail -n 1)"
 }
