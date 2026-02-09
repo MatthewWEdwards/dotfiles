@@ -99,3 +99,6 @@ done
 # tmp
 OLDHOME="/media/matt/390600a3-5ca7-44c1-98d9-11b38a26d409/home/matt/"
 alias oldhome="cd $OLDHOME"
+
+export EDITOR=vim
+export VISUAL=vim
